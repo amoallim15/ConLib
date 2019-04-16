@@ -1,6 +1,6 @@
 C:\Users\meca\Documents\GitHub\ConLib\obj\Debug\ConLib.csprojAssemblyReference.cache
 C:\Users\meca\Documents\GitHub\ConLib\obj\Debug\ConLib.csproj.CoreCompileInputs.cache
-C:\Users\meca\Documents\GitHub\ConLib\bin\Debug\ConLib.dll
 C:\Users\meca\Documents\GitHub\ConLib\bin\Debug\ConLib.pdb
-C:\Users\meca\Documents\GitHub\ConLib\obj\Debug\ConLib.dll
 C:\Users\meca\Documents\GitHub\ConLib\obj\Debug\ConLib.pdb
+C:\Users\meca\Documents\GitHub\ConLib\bin\Debug\ConLib.exe
+C:\Users\meca\Documents\GitHub\ConLib\obj\Debug\ConLib.exe

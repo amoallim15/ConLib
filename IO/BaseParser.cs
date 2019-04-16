@@ -6,12 +6,16 @@ using System.Threading.Tasks;
 
 namespace ConLib.IO
 {
-    public abstract class BaseParser
+    public class BaseParser
     {
-        internal void AddHeader(string header_line)
+        public void AddFacetNormal(double normalX, double normalY, double normalZ)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("normal " + normalX.ToString() + " " + normalY.ToString() + " " + normalZ.ToString());
         }
 
+        public void AddFacetVertex(double vertexX, double vertexY, double vertexZ)
+        {
+            Console.WriteLine("vertex " + vertexX.ToString() + " " + vertexY.ToString() + " " + vertexZ.ToString());
+        }
     }
 }

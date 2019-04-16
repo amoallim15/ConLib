@@ -4,36 +4,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using static ConLib.IO.Options;
 
 namespace ConLib.IO
 {
     public abstract class BaseStreamer
     {
-        public enum Extensions { STL, CON };
-        public BaseStreamer() { }
-        
+        public abstract List<string> Extensions { get; }
+        public abstract void Read(string path, BaseParser parser, HashSet<Flag> flags);
+        public abstract void Write(string path, BaseParser parser, HashSet<Flag> flags);
         public bool CanStream(string path)
         {
-            string ext = Path.GetExtension(path).ToUpper();
-            if (Enum.IsDefined(typeof(Extensions), ext))
+            string ext = GetExtension(path);
+            if (Extensions.Contains(ext))
                 return true;
             return false;
         }
-
         public bool CheckExtension(string path, string extension)
         {
-            string ext = Path.GetExtension(path).ToUpper();
-            if (ext.Equals(extension.ToUpper()))
+            string ext = GetExtension(path);
+            if (ext.Equals(extension.ToUpper().Trim('.')))
                 return true;
             return false;
         }
 
-        public abstract bool Read(string path, BaseParser parser);
-
-        public abstract bool Read(StreamReader stream, BaseParser parser);
-
-        public abstract bool Write(string path, BaseParser parser);
-
-        public abstract bool Write(StreamWriter stream, BaseParser parser);
+        public string GetExtension(string path)
+        {
+            return Path.GetExtension(path).ToUpper().Trim('.');
+        }
     }
 }
