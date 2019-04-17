@@ -8,14 +8,16 @@ namespace ConLib.IO
 {
     public class BaseParser
     {
-        public void AddFacetNormal(double normalX, double normalY, double normalZ)
+        public int FacetCount { get; internal set; }
+
+        public void SetFacet(List<Tuple<double, double, double>> facet)
         {
-            Console.WriteLine("normal " + normalX.ToString() + " " + normalY.ToString() + " " + normalZ.ToString());
+            facet.ForEach(Console.WriteLine);
         }
 
-        public void AddFacetVertex(double vertexX, double vertexY, double vertexZ)
+        public Tuple<double, double, double>[] GetFacet(int i)
         {
-            Console.WriteLine("vertex " + vertexX.ToString() + " " + vertexY.ToString() + " " + vertexZ.ToString());
+            throw new NotImplementedException();
         }
     }
 }

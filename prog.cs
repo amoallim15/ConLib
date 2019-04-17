@@ -12,8 +12,8 @@ namespace ConLib
         static void Main(string[] args)
         {
             Console.WriteLine("hello");
-            STLStreamer stl = new STLStreamer();
-            stl.Read(@"C:\Users\meca\Desktop\test2.stl", new BaseParser(), new Options());
+            STLBStreamer stl = new STLBStreamer();
+            stl.Read(@"C:\Users\meca\Desktop\test2.stl", new BaseParser(), null);
         }
     }
 }

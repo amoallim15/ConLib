@@ -4,15 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
-using static ConLib.IO.Options;
 
 namespace ConLib.IO
 {
     public abstract class BaseStreamer
     {
         public abstract List<string> Extensions { get; }
-        public abstract void Read(string path, BaseParser parser, HashSet<Flag> flags);
-        public abstract void Write(string path, BaseParser parser, HashSet<Flag> flags);
+        public abstract void Read(string path, BaseParser parser);
+        public abstract void Write(string path, BaseParser parser);
         public bool CanStream(string path)
         {
             string ext = GetExtension(path);

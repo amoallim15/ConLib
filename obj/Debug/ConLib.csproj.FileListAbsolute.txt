@@ -4,3 +4,4 @@ C:\Users\meca\Documents\GitHub\ConLib\bin\Debug\ConLib.pdb
 C:\Users\meca\Documents\GitHub\ConLib\obj\Debug\ConLib.pdb
 C:\Users\meca\Documents\GitHub\ConLib\bin\Debug\ConLib.exe
 C:\Users\meca\Documents\GitHub\ConLib\obj\Debug\ConLib.exe
+C:\Users\meca\Documents\GitHub\ConLib\bin\Debug\ConLib.exe.config

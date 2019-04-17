@@ -4,14 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConLib.IO
+namespace ConLib.Core.Geometry
 {
-    public abstract class Options
+    public class Mesh
     {
-        public enum Flag
+        public HashSet<HalfEdge> HalfEdges { get; private set; }
+
+        public Mesh()
         {
-            Default,
-            Binary,
+
         }
     }
 }
