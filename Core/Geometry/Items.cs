@@ -6,30 +6,34 @@ using System.Threading.Tasks;
 
 namespace ConLib.Core.Geometry
 {
-    public struct Vertex
+    public class Vertex<THalfEdgeHandle, TPoint>
     {
-        public Handle HalfEdge { get; set; }
+        public THalfEdgeHandle HalfEdge { get; set; }
+        public TPoint Point { get; private set; }
+
+        public Vertex(TPoint point)
+        {
+            Point = point;
+        }
     }
 
-    public struct Face
+    public class Face<THalfEdgeHandle>
     {
-        public Handle HalfEdge { get; set; }
+        public THalfEdgeHandle HalfEdge { get; set; }
     }
 
-    public struct HalfEdge
+    public class HalfEdge<THalfEdgeHandle, TVertexHandle, TFaceHandle>
     {
-        public Handle Opposite { get; set; }
-        public Handle Next { get; set; }
-        public Handle Prev { get; set; }
-        public Face Face { get; set; }
-        public Vertex Vertex { get; set; }
-    }
+        public THalfEdgeHandle Opposite { get; set; }
+        public THalfEdgeHandle Next { get; set; }
+        public THalfEdgeHandle Prev { get; set; }
+        public TVertexHandle Vertex { get; set; }
+        public TFaceHandle Face { get; set; }
 
-    public struct HalfEdgeDS
-    {
-        public List<Vertex> Vertices { get; set; }
-        public List<HalfEdge> HalfEdges { get; set; }
-        public List<Face> Faces { get; set; }
-
+        public bool IsBorder()
+        {
+            return true;
+            //return Face == FaceHandle();
+        }
     }
 }

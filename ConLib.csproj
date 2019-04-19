@@ -45,20 +45,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\Geometry\HalfEdgeDS.cs" />
+    <Compile Include="Core\Geometry\Handles.cs" />
+    <Compile Include="Core\Geometry\Items.cs" />
+    <Compile Include="Core\Geometry\Mesh.cs" />
+    <Compile Include="Core\Geometry\Point.cs" />
+    <Compile Include="Core\HalfEdgeDS\ItemIdx.cs" />
+    <Compile Include="Core\HalfEdgeDS\Items.cs" />
+    <Compile Include="Core\HalfEdgeDS\Mesh.cs" />
     <Compile Include="IO\BaseParser.cs" />
     <Compile Include="IO\BaseStreamer.cs" />
-    <Compile Include="IO\Options.cs" />
+    <Compile Include="IO\HalfEdgeParser.cs" />
     <Compile Include="IO\STLAStreamer.cs" />
     <Compile Include="IO\STLBStreamer.cs" />
-    <Compile Include="IO\STLStreamer.cs" />
     <Compile Include="Prog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Core\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitattributes" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

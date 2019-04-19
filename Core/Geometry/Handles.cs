@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace ConLib.Core.Geometry
 {
-    public class Handle
+    public abstract class BaseHandle
     {
         public int Id { get; set; }
-        public Handle(int id = -1)
+        public BaseHandle(int id = -1)
         {
             Id = id;
         }
@@ -21,18 +21,18 @@ namespace ConLib.Core.Geometry
         {
             Id = -1;
         }
-        public static bool operator ==(Handle lhs, Handle rhs)
+        public static bool operator ==(BaseHandle lhs, BaseHandle rhs)
         {
             return lhs.Id == rhs.Id;
         }
-        public static bool operator !=(Handle lhs, Handle rhs)
+        public static bool operator !=(BaseHandle lhs, BaseHandle rhs)
         {
             return lhs.Id != rhs.Id;
         }
 
         public override bool Equals(object obj)
         {
-            return Id == ((Handle)obj).Id;
+            return Id == ((BaseHandle)obj).Id;
         }
         public override int GetHashCode()
         {
@@ -54,5 +54,18 @@ namespace ConLib.Core.Geometry
         {
             Id -= amount;
         }
+    }
+
+    public class VertexHandle : BaseHandle
+    {
+        public VertexHandle(int id): base(id) { }
+    }
+    public class HalfEdgeHandle : BaseHandle
+    {
+        public HalfEdgeHandle(int id) : base(id) { }
+    }
+    public class FaceHandle : BaseHandle
+    {
+        public FaceHandle(int id) : base(id) { }
     }
 }
