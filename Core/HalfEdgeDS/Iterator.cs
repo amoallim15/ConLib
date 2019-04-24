@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConLib.Core.Geometry
+namespace ConLib.Core.HalfEdgeDS
 {
-    public class Mesh : HalfEdgeDS<HalfEdgeHandle, VertexHandle, FaceHandle, Point>
+    public class Iterator
     {
-
     }
 }

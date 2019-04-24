@@ -6,19 +6,20 @@ using System.Threading.Tasks;
 
 namespace ConLib.Core.HalfEdgeDS
 {
-    public struct Vertex
+    public class Vertex
     {
         public HalfEdgeIdx HalfEdge { get; set; }
     }
 
-    public struct HalfEdge
+    public class HalfEdge
     {
         public FaceIdx Face { get; set; }
-        public VertexIdx Vertex { get; set; }
+        public VertexIdx Target { get; set; }
         public HalfEdgeIdx Next { get; set; }
         public HalfEdgeIdx Prev { get; set; }
+        public HalfEdgeIdx Opposite { get; set; }
     }
-    public struct Face
+    public class Face
     {
         public HalfEdgeIdx HalfEdge { get; set; }
     }

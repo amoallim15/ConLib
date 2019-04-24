@@ -11,14 +11,14 @@ namespace ConLib
     {
         static void Main(string[] args)
         {
-            //Console.WriteLine("hello");
-            //STLBStreamer stl = new STLBStreamer();
-            //stl.Read(@"C:\Users\meca\Desktop\test2.stl", new BaseParser());
-            uint t = uint.MaxValue;
+            Console.WriteLine("hello");
+            STLBStreamer stl = new STLBStreamer();
+            stl.Read(@"C:\Users\meca\Desktop\test2.stl", new BaseParser());
+            /*uint t = uint.MaxValue;
             Console.WriteLine(t);
             t = t * 2;
             Console.WriteLine(t);
-            Console.WriteLine(unchecked((int)t));
+            Console.WriteLine(unchecked((int)t));*/
         }
     }
 }
